@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Page</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            color: #fff;
+        /*    background: url('https://cdn.discordapp.com/attachments/985189805191213099/1294234144703774740/a3cd99fca3a719168c55bd8411cf9e71.jpg?ex=670a44f9&is=6708f379&hm=3c4fbfd20801d6ff5ce6937e449257d6bf30347e58aa0240befd273a8f125937&') no-repeat center center fixed; */
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            animation: moveStars 100s linear infinite;
+            z-index: 0;
+        }
+
+        @keyframes moveStars {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 10000px 10000px;
+            }
+        }
+
+        .profile-container {
+            padding: 40px 20px; 
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-pic {
+            border-radius: 50%;
+            width: 140px;
+            height: 140px;
+            border: 5px solid white;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+            position: relative;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            font-size: 28px; 
+            color: #e0d3f7;
+            margin-top: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #c9b7e8;
+            margin-bottom: 15px;
+        }
+
+        .link-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px; 
+            z-index: 1;
+        }
+
+        .link-button {
+            width: 80%;
+            max-width: 350px;
+            padding: 12px;
+            margin: 10px 0;
+            background: linear-gradient(135deg, #6a3093, #a044ff);
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .link-button img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .link-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7);
+            background: linear-gradient(135deg, #7b4397, #dc2430);
+        }
+
+        .link-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+        }
+
+        .link-button:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .link-button span {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .profile-container,
+        .link-container {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* เพิ่มแสงนีออนให้กับหัวข้อและโปรไฟล์ */
+        h1 {
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(138, 43, 226, 0.5);
+        }
+
+        .profile-pic {
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(138, 43, 226, 0.7);
+        }
+    </style>
+</head>
+<body>
+
+<div class="stars"></div>
+
+<div class="profile-container">
+    <img src="https://cdn.discordapp.com/attachments/985189805191213099/1294011883438870610/IMG_20240904_122846.jpg?ex=670975fa&is=6708247a&hm=a8a034fdeb99f9021ac37e3f36e5e9776f1fd959554072e7954580307489644f&" alt="Profile Picture" class="profile-pic">
+    <h1>@Fantazy_Z</h1>
+    <p>ไม่มีอะไรยากเกินความสามารถ ถ้ายังไม่ได้ลอง 🥵🔥</p>
+</div>
+
+<div class="link-container">
+    <a href="https://www.tiktok.com/@dkubbbb5555?_t=8qS4M7yQM8z&_r=1" class="link-button">
+        <img src="https://cdn.discordapp.com/attachments/985189805191213099/1294010893528596500/vecteezy_tiktok-png-icon_16716450.png?ex=6709750e&is=6708238e&hm=13f5a30f1ada20449e00acfc1910b5b5ba60b709329092a9c5b90d1932eb39ec&" alt="TikTok">
+        <span>TikTok</span>
+    </a>
+    <a href="https://tmn.app.link/gC3aVRxxBNb" class="link-button">
+        <img src="https://cdn.discordapp.com/attachments/985189805191213099/1294235825198071900/TrueMoney-Wallet-Icon-Logo-Vector.svg-.png?ex=670a468a&is=6708f50a&hm=b7c21b545ad03d14d7ba900411bf40f622e567b380c51b1dfcbf37260a7a11ca&" alt="Line">
+        <span>บริจาคเงิน</span>
+    </a>
+    <a href="https://www.instagram.com/toonie_xd/profilecard/?igsh=ajh2aTQ1bXRiNnRv" class="link-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        <span>Instagram</span>
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=100030844862349&mibextid=ZbWKwL" class="link-button">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        <span>Facebook</span>
+    </a>
+    <a href="https://discord.com/invite/wXQpQRrvuT" class="link-button">
+        <img src="https://cdn.discordapp.com/attachments/985189805191213099/1294011307204546590/pngwing.com.png?ex=67097571&is=670823f1&hm=a50e771ddb161a4809f3b3a178beb60680a3d09e41e698674e066f7145966f15&" alt="Discord">
+        <span>Discord</span>
+    </a>
+</div>
+
+</body>
+</html>
